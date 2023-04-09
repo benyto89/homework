@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Article{% endblock %}
+
+{% block main %}
+    <main>
+        <div class="py-4 bg-light" style="display: flex; align-items: center; height: 100vh;">
+            <div class="container" style="max-width: 720px;">
+                {{ form_start(form) }}
+                {{ form_errors(form) }}
+                {{ form_row(form.title) }}
+                {{ form_row(form.text) }}
+                {{ form_row(form.image, {'label': 'Image URL'}) }}
+                <div class="d-flex gap-3">
+                    {{  form_row(form.save) }}
+                    {{  form_row(form.back) }}
+                </div>
+                {{ form_end(form) }}
+            </div>
+        </div>
+    </main>
+{% endblock %}
